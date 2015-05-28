@@ -1,0 +1,73 @@
+body {
+	font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.container {
+  margin-top: 50px;
+  min-height: 400px;
+}
+
+#header {
+  height: 180px;
+  background-image: url(/images/header-bck.png);
+  background-repeat: repeat-x;
+  padding: 25px 0;
+  width: 100%;
+}
+
+#header h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 75px;
+}
+
+ul#list {
+	list-style-type: none;
+}
+
+.questionPanel {
+  background-color: white;
+  height: 400px;
+  font-size: 16px;
+  padding-top: 25px;
+}
+
+.loginDrop {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 25px;
+  padding-top: 15px;
+}
+
+.margin-right {
+  margin-right: 5px;
+}
+
+.verticalStripes {  
+  background-color: #83b1b6;
+  background-size: 50px;
+  background-image: -webkit-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .5) 50%);
+  background-image: -moz-linear-gradient(0px 50%, transparent 50%, rgba(255, 255, 255, 0.5) 50%);
+  background-image: -ms-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .5) 50%);
+  background-image: -o-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .5) 50%);  
+}
+
+#question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#buttonDiv {
+  margin-top: -70px;
+}
+
+#footer {
+  background-color: #292311;
+  height: 50px;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  width: 100%;
+  margin-top: 50px;
+}

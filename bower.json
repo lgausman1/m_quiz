@@ -1,0 +1,14 @@
+{
+  "name": "m_quiz",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "lgausman1 <l.gausman@comcast.net>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}
