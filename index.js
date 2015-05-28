@@ -16,7 +16,7 @@ app.get("/", function (req, res) {
 });
 
 
-app.post("/users", function (req, res) {
+app.post("/users", function (req, res) { // this is what the form uses...
 	var newUser = req.body.user;
 	db.User.createSecure(newUser, function (err, user) {
 		if(user) {
@@ -24,7 +24,9 @@ app.post("/users", function (req, res) {
 		}
 		else {
 			//res.redirect("/login");
-			
+			res.send(alert("Passwords must match."));
+			//alert("Passwords must match.");
+
 		}
 	});
 });

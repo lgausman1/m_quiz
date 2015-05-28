@@ -68,7 +68,18 @@ userSchema.statics.authenticate = function (params, cb) {
 };
 
 
-
+/* db.Quiz.create({
+... title: "default",
+... questions: [
+		{
+		question: String,
+		choices: [String],
+		correctChoice: Number,
+		video: String
+		}
+	]
+});
+*/
 
 
 
