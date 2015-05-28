@@ -10,6 +10,7 @@
 
 </head>
 <body class="verticalStripes">
+<div id="wrapper">
 	<div id="header">
 		<h1>Play Music Trivia</h1>
 	</div>
@@ -18,7 +19,7 @@
 <!-- sign up module -->
 	<div id="getSignup" class="col-md-10 col-md-offset-4">
 		<h2>New user? Sign up to play.</h2>
-		<button class="btn btn-lg btn-primary" style="margin-left: 125px;" type="button" data-toggle="collapse" data-target="#signup" aria-expanded="false" aria-controls="signup">Sign Up</button>
+		<button class="btn btn-lg btn-primary left125" type="button" data-toggle="collapse" data-target="#signup" aria-expanded="false" aria-controls="signup">Sign Up</button>
 	</div>
 	<div class="collapse" id="signup">
 
@@ -61,23 +62,23 @@
 	</div> <!-- end sign up -->
 
 <!-- log in module -->
-	<div id="getLogin" class="col-md-10 col-md-offset-3">
+	<div id="getLogin" class="col-md-10 col-md-offset-4">
 		<h2>Returning user? Log in here.</h2>
-		<button class="btn btn-lg btn-primary">Log In</button>
+		<button class="btn btn-lg btn-primary left125"  type="button" data-toggle="collapse" data-target="#login" aria-expanded="false" aria-controls="login">Log In</button>
 	</div>
-	<div id="login">
+	<div class="collapse" id="login">
 		<div class="row">
-			<div class="col-md-10 col-md-offset-2">
+			<div class="col-md-6 col-md-offset-3 loginDrop">
 				<form method="POST" action="/login" class="form-horizontal">
 				    <div class="form-group">
-					    <label for="userName" class="col-md-2 control-label">User Name</label>
-					    <div class="col-md-4">
+					    <label for="userName" class="col-md-3 control-label">User Name</label>
+					    <div class="col-md-6">
 					    <input type="text" name="user[userName]" class="form-control">
 					    </div>
 				  	</div>
 				  	<div class="form-group">
-					  	<label for="password" class="col-md-2 control-label">Password</label>
-					  	<div class="col-md-4">
+					  	<label for="password" class="col-md-3 control-label">Password</label>
+					  	<div class="col-md-6">
 					    <input type="password" name="user[password]" class="form-control">
 					  	</div>
 					</div>
@@ -94,5 +95,6 @@
 </div> <!-- end container -->
 
 <div id="footer"><p>&copy; 2015. All rights reserved.</p></div>
+</div>
 </body>
 </html>

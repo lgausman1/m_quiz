@@ -39,8 +39,8 @@ $(function () {
 				 	}
 
 			} // end buildQuiz
+			
 		// build next question function
-
 		$nextButton.on('click', function() {
 			var userChoice = false;
 			
@@ -65,16 +65,16 @@ $(function () {
 			
 			$choiceList.empty();
 			$vidDiv.empty();
-			
+			// conditions to continue quiz
 			if(currentQuestion < len) {
 			buildQuiz();
 			}
 			else {
-				//append score and correct answers
 
+				//append score and correct answers
 				var answersGroup = document.createDocumentFragment();
 				
-				$.each(testQuestions, function(i, answer) { // passes in value, key 
+				$.each(testQuestions, function(i, answer) { // passes in key, value
 						
 					var $li = $('<li>');
 					
@@ -85,8 +85,8 @@ $(function () {
 					
 					}); // end $.each
 					
-				var answerH;
-				
+				var answerH; // answer header
+				// evaluate score
 				if(score >= 4) {
 					answerH = "Congratulations! You scored " + score + " out of " + len + " correct.";
 					}
@@ -107,6 +107,7 @@ $(function () {
 			
 			});
 
+		// go back to previous video and quiz choices, decrement score
 		$prevButton.on('click', function() {
 			currentQuestion--;
 			score--;

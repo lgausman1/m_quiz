@@ -23,7 +23,8 @@ app.post("/users", function (req, res) {
 			res.redirect("/game");
 		}
 		else {
-			res.redirect("/login");
+			//res.redirect("/login");
+			
 		}
 	});
 });
@@ -40,20 +41,16 @@ app.get("/game", function (req, res) {
 
 app.post("/login", function (req, res) {
 	var user = req.body.user;
-	console.log(user); // { userName: 'foo4', password: 'foo4' }
+
 	db.User.authenticate(user, function (err, user) {
 		if(!err) {
-			console.log("working");
 			res.redirect("/game");
 		}
 		else {
-			console.log("not working");
 			res.redirect("/login");
 		}
 	});
 });
-
-
 
 // 
 app.get("/testQuestions", function (req, res){

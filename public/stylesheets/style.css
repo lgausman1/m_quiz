@@ -1,11 +1,16 @@
 body {
 	font-family: Tahoma, Geneva, sans-serif;
+  height: 100%;
+}
 
+#wrapper {
+  min-height: 100%;
 }
 
 .container {
   margin-top: 50px;
   min-height: 400px;
+  padding-bottom: 50px;
 }
 
 #header {
@@ -44,6 +49,10 @@ ul#list {
   margin-right: 5px;
 }
 
+.left125 {
+  margin-left: 125px;
+}
+
 .verticalStripes {  
   background-color: #83b1b6;
   background-size: 50px;
@@ -59,7 +68,11 @@ ul#list {
 }
 
 #buttonDiv {
-  margin-top: -70px;
+  margin-top: -120px;
+}
+
+.loginDrop {
+  margin-bottom: 50px;
 }
 
 #footer {
@@ -70,4 +83,6 @@ ul#list {
   padding-top: 20px;
   width: 100%;
   margin-top: 50px;
+  position: fixed;
+  bottom: 0px;
 }
