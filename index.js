@@ -24,7 +24,7 @@ app.post("/users", function (req, res) { // this is what the form uses...
 		}
 		else {
 			//res.redirect("/login");
-			res.send(alert("Passwords must match."));
+			res.send(err);
 			//alert("Passwords must match.");
 
 		}
@@ -67,6 +67,4 @@ app.get("/testQuestions", function (req, res){
 
 
 //////////////////
-app.listen(3000, function () {
-	console.log("localhost is working");
-});
+app.listen(process.env.PORT || 3000);
