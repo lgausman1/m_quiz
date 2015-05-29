@@ -45,3 +45,43 @@ db.Quiz.create({
  }, function (err, quiz) {
   console.log("DB HAS BEEN SEEDED WITH DATA", quiz)
  });
+
+///////// written to the remote database
+
+DB HAS BEEN SEEDED WITH DATA { __v: 0,
+  title: 'default',
+  _id: 5567bc5527982a0600855a83,
+  questions: 
+   [ { question: 'What does "Gangnam" in this song come from? Is it:',
+       correctChoice: 1,
+       video: 'https://www.youtube.com/embed/CH1XGdu-hzQ?rel=0&amp;start=150&amp;end=182&amp;autoplay=1&amp;autohide=1&amp;showinfo=0',
+       _id: 5567bc5527982a0600855a89,
+       choices: [Object] },
+     
+     { question: 'Name that tune. Is it:',
+       correctChoice: 1,
+       video: 'http://www.youtube.com/embed/nrnZSLwfzVs?rel=0&amp;start=105&amp;end=141&amp;autoplay=1&amp;autohide=1&amp;showinfo=0',
+       _id: 5567bc5527982a0600855a88,
+       choices: [Object] },
+     
+     { question: 'Name the performers. Is it:',
+       correctChoice: 2,
+       video: 'http://www.youtube.com/embed/zV2GA63HEGk?rel=0&amp;start=105&amp;end=146&amp;autoplay=1&amp;autohide=1&amp;showinfo=0',
+       _id: 5567bc5527982a0600855a87,
+       choices: [Object] },
+     
+     { question: 'Which state in the US was Madonna born in?',
+       correctChoice: 3,
+       video: 'https://www.youtube.com/embed/GuJQSAiODqI?rel=0&amp;start=99&amp;end=123&amp;autoplay=1&amp;autohide=1&amp;showinfo=0',
+       _id: 5567bc5527982a0600855a86,
+       choices: [Object] },
+     { question: 'Name this performer. Is it:',
+       correctChoice: 1,
+       video: 'https://www.youtube.com/embed/OPf0YbXqDm0?rel=0&amp;start=93&amp;end=141&amp;autoplay=1&amp;autohide=1&amp;showinfo=0',
+       _id: 5567bc5527982a0600855a85,
+       choices: [Object] },
+     { question: 'Name the featured female vocalist. Is it:',
+       correctChoice: 3,
+       video: 'https://www.youtube.com/embed/iEeD5G22Rqs?rel=0&amp;start=139&amp;end=184&amp;autoplay=1&amp;autohide=1&amp;showinfo=0',
+       _id: 5567bc5527982a0600855a84,
+       choices: [Object] } ] }

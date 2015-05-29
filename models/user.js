@@ -79,7 +79,54 @@ userSchema.statics.authenticate = function (params, cb) {
 		}
 	]
 });
+
+var db = require("./models");
+
+db.Quiz.findById(id, function(err, video) {
+	
+});
+
+// from remote node 
+{ __v: 0,
+  title: 'default',
+  _id: 5567bc5527982a0600855a83,
+  questions: 
+
+// local code from index.js
+Quiz.findById(id, function (err, tank) {
+  if (err) return handleError(err);
+  
+  tank.size = 'large';
+  tank.save(function (err) {
+    if (err) return handleError(err);
+    res.send(tank);
+  });
+});
+
+// first _id
+5567bc5527982a0600855a88
+
+video: 'http://www.youtube.com/embed/nrnZSLwfzVs?rel=0&amp;start=105&amp;end=141&amp;autoplay=1&amp;autohide=1&amp;showinfo=0'
+
+
+var db = require('./models');
+5567bc5527982a0600855a83.questions.findOne({ video: 'http://www.youtube.com/embed/nrnZSLwfzVs?rel=0&amp;start=105&amp;end=141&amp;autoplay=1&amp;autohide=1&amp;showinfo=0' }, function (err, doc) {
+  if (err) {
+	console.log("Database error: " + err);
+  }
+
+  doc.video = 'https://www.youtube.com/embed/nrnZSLwfzVs?rel=0&amp;start=105&amp;end=141&amp;autoplay=1&amp;autohide=1&amp;showinfo=0';
+  doc.save(function(err) {
+	if(err){
+	console.log("Data save error: " + err);
+	}
+  });
+});
+// remote node returned: Quiz is not defined
+// remote node returned: TypeError: Cannot set property 'video' of null
+
 */
+
 
 
 
