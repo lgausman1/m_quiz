@@ -15,5 +15,10 @@ music trivia quiz
 <ol>
   <li>Users need to be able to log out. Establish whether sessions need to be incorporated to accomplish this.</li>
   <li>Update the quiz database: need to resolve http:// video sources to https://. The nested Mongoose schema for the quiz is challenging for me to update.</li>
-  
+  <li>A more meaningful quiz evalution for users should be implemented.</li>
+</ol>
+<h2>Future Iterations of the Project</h2>
+<ol>
+  <li>Develop multiple quizzes. Users would be able to select skill level: easy, medium, difficult</li>
+  <li>User scoreboard could be incorporated.</li>
 </ol>
