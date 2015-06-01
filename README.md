@@ -14,6 +14,7 @@ music trivia quiz
 <h2>Outstanding Issues</h2>
 <ol>
   <li>Users need to be able to log out. Establish whether sessions need to be incorporated to accomplish this.</li>
+  <li>Provide user error messages if passwords do not match, or login account doesn't exist.</li>
   <li>Update the quiz database: need to resolve http:// video sources to https://. The nested Mongoose schema for the quiz is challenging for me to update.</li>
   <li>A more meaningful quiz evalution for users should be implemented.</li>
 </ol>
