@@ -8,7 +8,7 @@ var questionSchema = new mongoose.Schema({
 	})
 
 var quizSchema = new mongoose.Schema({
-	title: String, // default 
+	title: String, // default
 	questions: [questionSchema]
 });
 

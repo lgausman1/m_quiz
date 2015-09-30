@@ -28,18 +28,23 @@
     </div>
   <div class="col-md-5 questionPanel">
   	
-  	<div id="question"><%= question %></div>
+  	<div id="question"><%= question %>
+  		<div id="msgDiv"></div>
+  		<div><% this._id %></div>
+  	</div>
   	
   	<ul id="list">
   	<% _(choices).each(function (choice) { %>
-		<li> <input type="radio" value='<%= choice %>' name="choicesGroup"> <%= choice %> </li>
+		<div class="form-group">
+			<li> <input type="radio" value='<%= choice %>' name="choicesGroup"> <%= choice %> </li>
+		</div>
 	<% }) %>
 
   </div>
 
 </script>
 <div id="footer"><p>&copy; 2015. All rights reserved.</p></div>
-</<div>
+</div>
 </body>
 
 </html>

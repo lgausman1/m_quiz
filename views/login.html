@@ -5,9 +5,57 @@
 	<script src="/bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
 	<link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 	<script src="/bower_components/bootstrap/js/collapse.js" type="text/javascript"></script>
+	<script src="/javascripts/jquery.validate.js" type="text/javascript"></script>
 	<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
 	<link href="/stylesheets/style.css" rel="stylesheet">
+<script>
+$(document).ready(function() {
+	$('#signupForm').validate({
+		rules: {
+			user: { required: true },
+			signUpEmail: { 
+				required: true, 
+				email: true 
+			},
+			signUpPassword: { required: true },
+			signUpConfirm: { 
+				required: true, 
+				equalTo: '#signUpPassword' 
+			}
+		},
+		messages: {
+			user: "please enter a username",
+			signUpEmail: {
+				required: "please enter a valid email",
+				email: "please enter a valid email"
+			},
+			signUpPassword: "please enter a password",
+			signUpConfirm: {
+				required: "please confirm your password",
+				equalTo: "passwords must match"
 
+			}
+		}
+	});
+	$('#loginForm').validate({
+		rules: {
+			email: {
+				required: true,
+				email: true
+			},
+			password: {
+				required: true }
+		},
+		messages: {
+			email: {
+				required: 'please enter your email',
+				email: 'please enter a valid email'
+			},
+			password: 'please enter your password'
+		}
+	});
+});
+</script>
 </head>
 <body class="verticalStripes">
 <div id="wrapper">
@@ -17,6 +65,7 @@
 
 <div class="container">
 <!-- sign up module -->
+
 	<div id="getSignup" class="col-md-10 col-md-offset-4">
 		<h2>New user? Sign up to play.</h2>
 		<button class="btn btn-lg btn-primary left125" type="button" data-toggle="collapse" data-target="#signup" aria-expanded="false" aria-controls="signup">Sign Up</button>
@@ -25,29 +74,29 @@
 
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 loginDrop">
-				<form method="POST" action="/users"  class="form-horizontal">
+				<form method="POST" action="/users"  class="form-horizontal" id="signupForm">
 				<div class="form-group">
 					<label for="userName" class="col-md-3 control-label">User Name</label>
 					<div class="col-md-6">
-					<input type="text" name="user[userName]" class="form-control">
+					<input type="text" name="user[userName]" class="form-control" id="user" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="email" class="col-md-3 control-label">Email</label>
 					<div class="col-md-6">
-					<input type="text" name="user[email]" class="form-control">
+					<input type="email" name="user[email]" class="form-control" id="signUpEmail" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="password" class="col-md-3 control-label">Password</label>
 					<div class="col-md-6">
-					<input type="password" name="user[password]" class="form-control">
+					<input type="password" name="user[password]" class="form-control" id="signUpPassword" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="confirmPassword" class="col-md-3 control-label">Confirm Password</label>
 					<div class="col-md-6">
-					<input type="password" name="user[password_confirm]" class="form-control">
+					<input type="password" name="user[password_confirm]" class="form-control" id="signUpConfirm" required>
 					</div>
 				</div>
 				<div class="form-group">
@@ -69,17 +118,17 @@
 	<div class="collapse" id="login">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 loginDrop">
-				<form method="POST" action="/login" class="form-horizontal">
+				<form method="POST" action="/login" class="form-horizontal" id="loginForm">
 				    <div class="form-group">
-					    <label for="userName" class="col-md-3 control-label">User Name</label>
+					    <label for="email" class="col-md-3 control-label">Email</label>
 					    <div class="col-md-6">
-					    <input type="text" name="user[userName]" class="form-control">
+					    <input type="email" name="user[email]" class="form-control" id="email" required>
 					    </div>
 				  	</div>
 				  	<div class="form-group">
 					  	<label for="password" class="col-md-3 control-label">Password</label>
 					  	<div class="col-md-6">
-					    <input type="password" name="user[password]" class="form-control">
+					    <input type="password" name="user[password]" class="form-control" id="password" required>
 					  	</div>
 					</div>
 					<div class="form-group">
@@ -96,5 +145,6 @@
 
 <div id="footer"><p>&copy; 2015. All rights reserved.</p></div>
 </div>
+
 </body>
 </html>

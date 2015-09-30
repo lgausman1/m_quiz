@@ -3,7 +3,7 @@ var db = require("./models");
 db.Quiz.create({
   title: "default",
   questions: 
-[
+[      //'Where does the reference "Gangnam" in this song come from? Is it:'
 { question: 'What does "Gangnam" in this song come from? Is it:',
   correctChoice: 1,
   video: 'https://www.youtube.com/embed/CH1XGdu-hzQ?rel=0&amp;start=150&amp;end=182&amp;autoplay=1&amp;autohide=1&amp;showinfo=0',
