@@ -15,7 +15,7 @@ music trivia quiz
 <h2>Outstanding Issues</h2>
 <ol>
   <li>Users need to be able to log out.</li>
-  <li>Provide user error messages if passwords do not match, or login account doesn't exist. Evaluate whether this requires incorporating a framework such as Backbone or Angular.</li>
+  <li>Provide user error messages if passwords do not match, or login account doesn't exist. </li>
 
 </ol>
 <h2>Future Iterations of the Project</h2>

@@ -1,6 +1,6 @@
 var express = require("express");
-var flash = require("connect-flash");
-var session = require("express-session");
+//var flash = require("connect-flash");
+//var session = require("express-session");
 var app = express();
 var bodyParser = require("body-parser");
 var path = require("path");
@@ -12,14 +12,14 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(session({
-	secret: "super Secret",
-	cookie: {},
-	resave: false,
-	saveUninitialized: false
-}));
+// app.use(session({
+// 	secret: "super Secret",
+// 	cookie: {},
+// 	resave: false,
+// 	saveUninitialized: false
+// }));
 
-app.use(flash());
+//app.use(flash());
 
 var loginHelper = function (req, res, next) {
 

@@ -25,7 +25,8 @@ userSchema.statics.createSecure = function (params, cb) {
 	isConfirmed = confirm(params.password, params.password_confirm);
 
 	if(!isConfirmed) {
-		return cb(err, null); //(err, user)
+		var err = "Passwords don't match.";
+		return cb(err, null); //(err, user) throws ReferenceError: err is not defined
 		//append error message to document
 	}
 	// this is currently pointing to userSchema
@@ -54,7 +55,7 @@ userSchema.methods.checkPswd = function (password, cb) {
 		}
 		else {
 			cb("Password is invalid.", err); // flash throws error: TypeError: undefined is not a function
-		}
+		}                                   // without flash throws error: ReferenceError: err is not defined
 	});
 };
 
@@ -64,7 +65,7 @@ userSchema.statics.authenticate = function (params, cb) {
 	},
 	function (err, user) {
             if (user) user.checkPswrd(params.password, cb);
-            else cb("Login failed - no user found");
+            else cb("Login failed - no user found"); // passes to html on /login
 
 	}); // end findOne
 };
